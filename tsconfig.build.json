@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "missing-i18n-scanner.ts",
+    "missing-i18n-scanner-runner.ts"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "knownAttributes": [],
+  "files": {
+    "includeGlobs": [
+      "**/*.html"
+    ],
+    "excludeGlobs": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/.git/**",
+      "**/coverage/**",
+      "**/.angular/**"
+    ]
+  },
+  "parse": {
+    "textPreprocess": {
+      "removeAngularCode": true,
+      "cleanupRegexes": [
+        "\\{\\{[\\s\\S]*?\\}\\}",
+        "[\\s➔/\\d\\:()?\\.=-\\[\\]\\-€♥°β%\\|*α±~,+−\\\\]*"
+      ]
+    },
+    "excludeRegexes": [
+      "^\\s*\\{\\{[^}]+\\}\\}\\s*$",
+      "^\\s*[\\p{P}\\p{S}]+\\s*$",
+      "^\\s*[\\p{P}\\p{S}\\p{N}]+\\s*$",
+      "^.$",
+      "^\\s*(?:cm|qm)*\\s*$"
+    ]
+  }
+}

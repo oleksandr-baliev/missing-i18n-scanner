@@ -1,0 +1,46 @@
+{
+  "name": "missing-i18n-scanner",
+  "version": "0.1.0",
+  "description": "Scans Angular HTML templates for elements missing i18n or i18n-* attributes, with optional auto-fix.",
+  "author": "Sasha Balev",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "i18n",
+    "internationalization",
+    "localization",
+    "html",
+    "scanner",
+    "lint"
+  ],
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "commonjs",
+  "main": "dist/missing-i18n-scanner.js",
+  "types": "dist/missing-i18n-scanner.d.ts",
+  "bin": {
+    "missing-i18n-scanner": "dist/missing-i18n-scanner-runner.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.2",
+    "parse5": "^7.2.0"
+  }
+}
